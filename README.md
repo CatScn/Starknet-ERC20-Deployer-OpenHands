@@ -26,7 +26,7 @@ This will download and install all necessary files.
 
 ## First Time Deployment
 
-Once the installation is complete, navigate to the `Starknet-ERC20-Deployer` folder and run the following command to deploy your first ERC20 token:
+Once the installation is complete, run the following command to deploy your first ERC20 token:
 
 ```bash
 cd Starknet-ERC20-Deployer && npm run firstDeploy
