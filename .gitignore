@@ -1,0 +1,12 @@
+node_modules
+target
+
+.env
+.snfoundry_cache
+.DS_Store
+package-lock.json
+
+Scarb.lock
+
+test.cairo
+test.ts
