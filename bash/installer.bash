@@ -31,9 +31,12 @@ asdf plugin add starknet-foundry
 asdf install starknet-foundry 0.33.0
 asdf global starknet-foundry 0.33.0
 
+echo "Installing npm deps, this may take a few minutes..."
 # Install project dependencies using npm (node package manager)
 npm install
 
+echo "Building Contract, this also may take a few moments..."
 # Build the project using the 'scarb' tool
 scarb build
 
+echo "If no errors eccured you can do a test deploy,\n just run: cd Starknet-ERC20-Deployer && npm run firstDeploy"

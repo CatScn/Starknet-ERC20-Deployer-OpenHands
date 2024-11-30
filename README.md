@@ -37,6 +37,11 @@ You will be prompted to enter your private key and the address to deploy your to
 ## Customization
 
 After the first deployment, you can customize your ERC20 token by editing the `.env` file. Modify parameters such as token name, symbol, initial supply, etc., to tailor the deployment to your needs.
+Then to deploy your customized token just run:
+
+```bash
+npm run deploy
+```
 
 ## Tested Environment
 
