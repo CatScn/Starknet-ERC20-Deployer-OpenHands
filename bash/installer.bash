@@ -39,4 +39,4 @@ echo "Building Contract, this also may take a few moments..."
 # Build the project using the 'scarb' tool
 scarb build
 
-echo "If no errors eccured you can do a test deploy,\n just run: cd Starknet-ERC20-Deployer && npm run firstDeploy"
+echo "If no errors eccured you can do a test deploy, just run: cd Starknet-ERC20-Deployer && npm run firstDeploy"
