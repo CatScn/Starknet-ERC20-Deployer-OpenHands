@@ -12,7 +12,7 @@ Before using this tool, ensure you have the following installed:
 - [git](https://git-scm.com/)
 
 Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.app/) for a test deployment. 
-To deploy a test contract you'll alsp need some ETH in your wallet, you can use [blast's free faucet](https://blastapi.io/faucets/starknet-sepolia-eth).
+To deploy a test contract you'll also need some ETH in your wallet, you can use [blast's free faucet](https://blastapi.io/faucets/starknet-sepolia-eth).
 
 ## Installation
 
