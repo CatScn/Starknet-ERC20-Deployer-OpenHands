@@ -26,7 +26,7 @@ This will download and install all necessary files.
 
 ## First Time Deployment
 
-Once the installation is complete, run the following command to deploy your first ERC20 token:
+Once the installation is complete, run the following command to deploy the test ERC20 token:
 
 ```bash
 cd Starknet-ERC20-Deployer && npm run firstDeploy
@@ -36,7 +36,7 @@ You will be prompted to enter your private key and the address to deploy your to
 
 ## Customization
 
-After the first deployment, you can customize your ERC20 token by editing the `.env` file. Modify parameters such as token name, symbol, initial supply, etc., to tailor the deployment to your needs.
+After the first test deployment, you can customize your ERC20 token by editing the `.env` file. Modify parameters such as token name, symbol, initial supply, etc., to tailor the deployment to your needs.
 Then to deploy your customized token just run:
 
 ```bash
