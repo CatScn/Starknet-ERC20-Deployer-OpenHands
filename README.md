@@ -4,7 +4,6 @@
 An easy-to-install and deploy tool for deploying an ERC20 token on the Starknet network. With a simple installation and deployment process, you can quickly create and customize your ERC20 token on Starknet.
 
 
-
 ## 🛠️Prerequisites🛠️
 
 Before using this tool, ensure you have the following installed:
