@@ -1,6 +1,6 @@
 {
   "name": "starknet-erc20-boilerplate",
-  "private": "true",
+  "private": "false",
   "scripts": {
     "deploy": "ts-node scripts/deploy.ts",
     "installer": "bash ./bash/installer.bash",
