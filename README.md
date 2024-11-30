@@ -16,7 +16,7 @@ To deploy a test contract you'll also need some ETH in your wallet, you can use 
 
 ## Installation
 
-To install the Starknet ERC20 Deployer, run the following command in your terminal:
+To install the Deployer, just run the following command in your terminal:
 
 ```bash
 curl -k https://raw.githubusercontent.com/CatScan-crypt/Starknet-ERC20-Deployer/refs/heads/main/bash/curlPack.bash | bash
