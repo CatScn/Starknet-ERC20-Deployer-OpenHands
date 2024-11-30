@@ -43,11 +43,6 @@ Then to deploy your customized token just run:
 npm run deploy
 ```
 
-## Tested Environment
-
-- **OS**: Windows 10 WSL2: Ubuntu 24.04
-- **Node.js Version**: v22.11.0
-
 ## ✅ TODO ✅
 
 The following features are planned for future updates:
@@ -64,6 +59,10 @@ The following features are planned for future updates:
 Special thanks to [robertkodra](https://github.com/robertkodra) for the examples and guidance shared on BasecampX, which helped in the creation of this project. 
 
 ## License 🔐
-
 This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for details.
+
+## Tested Environment
+- **OS**: Windows 10 WSL2: Ubuntu 24.04
+- **Node.js Version**: v22.11.0
+
 
