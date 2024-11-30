@@ -11,8 +11,8 @@ Before using this tool, ensure you have the following installed:
 - [curl](https://curl.se/)
 - [git](https://git-scm.com/)
 
-Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.app/) for a test deployment.
-To deploy a test contract you'll need some ETH in your wallet, you can use [blast's faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
+Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.app/) for a test deployment. 
+To deploy a test contract you'll need some ETH in your wallet, you can use [blast's free faucet](https://blastapi.io/faucets/starknet-sepolia-eth).
 
 ## Installation
 
@@ -32,7 +32,7 @@ Once the installation is complete, navigate to the `Starknet-ERC20-Deployer` fol
 cd Starknet-ERC20-Deployer && npm run firstDeploy
 ```
 
-You will be prompted to enter your private key and the address to deploy your token. Make sure your wallet is already deployed on [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.xyz/).
+You will be prompted to enter your private key and the address to deploy your token. Make sure your wallet is already deployed on sepolia with either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.xyz/).
 
 ## Customization
 
