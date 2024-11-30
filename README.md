@@ -3,6 +3,8 @@
 
 An easy-to-install and deploy tool for deploying an ERC20 token on the Starknet network. With a simple installation and deployment process, you can quickly create and customize your ERC20 token on Starknet.
 
+
+
 ## 🛠️Prerequisites🛠️
 
 Before using this tool, ensure you have the following installed:
@@ -14,7 +16,9 @@ Before using this tool, ensure you have the following installed:
 Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.app/) for a test deployment. 
 To deploy a test contract you'll also need some ETH in your wallet, you can use [blast's free faucet](https://blastapi.io/faucets/starknet-sepolia-eth).
 
-## Installation🦾
+
+
+## Installation 🦾
 
 To install the Deployer, just run the following command in your terminal:
 
@@ -23,6 +27,8 @@ curl -k https://raw.githubusercontent.com/CatScan-crypt/Starknet-ERC20-Deployer/
 ```
 
 This will download and install all necessary files.
+
+
 
 ## First Time Deployment🚀 🚀 🚀 
 
@@ -34,6 +40,7 @@ cd Starknet-ERC20-Deployer && npm run firstDeploy
 
 You will be prompted to enter your private key and the address to deploy your token. Make sure your wallet is already deployed on sepolia with either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.xyz/).
 
+
 ## Customization📊
 
 After the first test deployment, you can customize your ERC20 token by editing the `.env` file. Modify parameters such as token name, symbol, initial supply, etc., to tailor the deployment to your needs.
@@ -42,6 +49,8 @@ Then to deploy your customized token just run:
 ```bash
 npm run deploy
 ```
+
+
 
 ## ✅ TODO ✅
 
