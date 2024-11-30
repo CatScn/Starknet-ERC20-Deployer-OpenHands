@@ -1,4 +1,4 @@
-```markdown
+
 # Starknet ERC20 Deployer
 
 An easy-to-install and deploy tool for deploying an ERC20 token on the Starknet network. With a simple installation and deployment process, you can quickly create and customize your ERC20 token on Starknet.
@@ -60,4 +60,4 @@ Special thanks to [robertkodra](https://github.com/robertkodra) for the examples
 ## License
 
 This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for details.
-```
+
