@@ -14,7 +14,7 @@ if [ -n "$BASH_VERSION" ]; then
     echo '. "$HOME/.asdf/asdf.sh"' >> "$HOME/.bashrc"
     . "$HOME/.asdf/asdf.sh"  # Source immediately for the current session
 else
-    # If neither bash nor zsh, prompt user to install asdf manually
+    # If bash is not present, prompt user to install asdf manually
     echo ".bashrc is not detected. Please manually install asdf by following the instructions on https://asdf-vm.com/guide/getting-started.html."
     echo "Press Enter to exit the script."
     read
