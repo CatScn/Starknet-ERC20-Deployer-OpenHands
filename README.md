@@ -22,7 +22,14 @@ Before using this tool, ensure you have the following installed:
 \
 ``
 ``
-Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.app/) for a test deployment. &nbsp;
+ 
+
+Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/)
+[<img src="https://github.com/user-attachments/assets/bd83597e-0ee3-483a-b299-88959d43c743" width="25" height="23">](https://www.argent.xyz/) 
+or 
+[Braavos](https://braavos.app/)
+[<img src="https://github.com/user-attachments/assets/dd9739be-d81e-430e-a3be-b3b9d3375a7d" width="25" height="25">](https://braavos.app/)
+for a test deployment. &nbsp;
 
 After you choose a wallet, change the network to sepolia(testnet): &nbsp; \
 In Braavos just go to wallet setting and click on networks and change to sepolia. &nbsp; \
