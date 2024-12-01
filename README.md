@@ -27,7 +27,7 @@ Additionally, you'll need a deployed wallet on seploia(testnet) on either [Argen
 or 
 [Braavos](https://braavos.app/)
 [<img src="https://github.com/user-attachments/assets/dd9739be-d81e-430e-a3be-b3b9d3375a7d" width="25" height="25">](https://braavos.app/)
-for a test deployment. &nbsp;
+for a test and mainnet deployment. &nbsp;
 
 After you choose a wallet, change the network to sepolia(testnet): &nbsp; \
 In Braavos just go to wallet setting and click on networks and change to sepolia. &nbsp; \
