@@ -13,6 +13,7 @@ With a simple installation and deployment process, you can quickly create and cu
 
 Before using this tool, ensure you have the following installed:
 
+- Bash: Linux > 22.04 | Windows - [WSL2](https://www.sitepoint.com/wsl2) | macOS - [Change settings](https://alvinwanjala.com/blog/set-bash-default-macos-shell)
 - [Node.js](https://nodejs.org/) (v22.11.0 or higher)
 - [curl](https://curl.se/)
 - [git](https://git-scm.com/)&nbsp; 
@@ -71,7 +72,7 @@ Example first deploy: &nbsp; \
 &nbsp;
 ## Customization📊
 
-After the first test deployment, you can customize your ERC20 token by editing the `.env` file. &nbsp; \
+After the first test deployment, you can customize your ERC20 token by editing the `.env` file that was saved in your Starknet-ERC20-Deployer folder. &nbsp; \
 Modify parameters such as token name, symbol, initial supply, etc., to tailor the deployment to your needs. &nbsp; \
 Then to deploy your customized token just run:
 
@@ -84,7 +85,7 @@ npm run deploy
 
 The following features are planned for future updates:
 
-- [ ] Adding an example GIF or video for easier understanding.
+- [x] Adding an example GIF or video for easier understanding.
 - [ ] Verifying the contract on Voyager.
 - [ ] Implementing an uninstaller.
 - [ ] Adding a CLI (Command Line Interface) for easier configuration.
