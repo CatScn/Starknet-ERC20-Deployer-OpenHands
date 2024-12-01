@@ -42,7 +42,7 @@ After your wallet is funded you can proceed to set it up on chain (deploy): &nbs
 To install the Deployer, just run the following command in your terminal:
 
 ```bash
-curl -k https://raw.githubusercontent.com/CatScan-crypt/Starknet-ERC20-Deployer/refs/heads/main/bash/curlPack.bash | bash
+curl https://raw.githubusercontent.com/CatScan-crypt/Starknet-ERC20-Deployer/refs/heads/main/bash/curlPack.bash | bash
 ```
 This will download and install all necessary files. &nbsp; \
 &nbsp;
