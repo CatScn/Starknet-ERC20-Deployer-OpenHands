@@ -5,7 +5,7 @@ cp example.env .env
 
 # Prompt the user to enter the DEPLOYER_PRIVATE_KEY
 echo "Please enter your DEPLOYER_PRIVATE_KEY:"
-read deployer_private_key
+read -s deployer_private_key
 # Append the DEPLOYER_PRIVATE_KEY to the .env file
 sed -i "s|DEPLOYER_PRIVATE_KEY=.*|DEPLOYER_PRIVATE_KEY=$deployer_private_key|" .env
 
