@@ -18,6 +18,13 @@ Before using this tool, ensure you have the following installed:
 - [git](https://git-scm.com/)
 
 Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.app/) for a test deployment. \
+&nbsp;
+
+After you choose a wallet, change the network to sepolia(testnet): &nbsp; \
+In Braavos just go to wallet setting and click on networks and change to sepolia. &nbsp; \
+For ArgentX you can use [How to change network for ArgentX guide.](https://docs.argent.xyz/argent-wallets/argent-x/adding-custom-rpcs) &nbsp; \
+&nbsp;
+
 To deploy a test token and to deploy the wallet on the blockchain you'll need some ETH in your wallet, you can use [blast's free faucet](https://blastapi.io/faucets/starknet-sepolia-eth). &nbsp; 
 
 &nbsp;
