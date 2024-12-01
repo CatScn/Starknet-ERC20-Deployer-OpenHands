@@ -22,8 +22,6 @@ Before using this tool, ensure you have the following installed:
 \
 ``
 ``
- 
-
 Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/)
 [<img src="https://github.com/user-attachments/assets/bd83597e-0ee3-483a-b299-88959d43c743" width="25" height="23">](https://www.argent.xyz/) 
 or 
