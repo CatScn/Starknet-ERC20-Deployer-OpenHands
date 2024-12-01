@@ -18,13 +18,14 @@ Before using this tool, ensure you have the following installed:
 - [git](https://git-scm.com/)
 
 Additionally, you'll need a deployed wallet on seploia(testnet) on either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.app/) for a test deployment. \
-To deploy a test token you'll also need some ETH in your wallet, you can use [blast's free faucet](https://blastapi.io/faucets/starknet-sepolia-eth).
+To deploy a test token and to deploy the wallet on the blockchain you'll need some ETH in your wallet, you can use [blast's free faucet](https://blastapi.io/faucets/starknet-sepolia-eth). &nbsp; \
+After your wallet is funded you can procces to set it up on chain (deploy): &nbsp; \
+[How to deploy guide for Braavos.](https://braavos.app/faq/setting-up-your-braavos-wallet-easy-starknet-guide/) &nbsp; \
+[How to deploy guide for ArgentX.](https://support.argent.xyz/hc/en-us/articles/8802319054237-How-to-activate-deploy-my-Argent-X-wallet#:~:text=To%20deploy%20the%20wallet%2C%20you,to%20your%20own%20wallet%20address.) &nbsp; 
+
 &nbsp;
 &nbsp;
 
-&nbsp;
-
-&nbsp;
 ## Installation 🦾
 
 To install the Deployer, just run the following command in your terminal:
