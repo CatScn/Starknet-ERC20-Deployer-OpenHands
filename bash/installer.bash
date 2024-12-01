@@ -11,7 +11,7 @@ git clone https://github.com/asdf-vm/asdf.git "$HOME/.asdf" --branch v0.14.1
 
 if [ -n "$BASH_VERSION" ]; then
     # If Bash shell, append to .bashrc
-    echo '. "$HOME/.asdf/asdf.sh"' >> "$HOME/.bashrc"
+    echo ". "$HOME/.asdf/asdf.sh"" >> "$HOME/.bashrc"
     . "$HOME/.asdf/asdf.sh"  # Source immediately for the current session
 else
     # If bash is not present, prompt user to install asdf manually
