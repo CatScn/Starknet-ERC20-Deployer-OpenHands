@@ -32,14 +32,16 @@ To install the Deployer, just run the following command in your terminal:
 ```bash
 curl -k https://raw.githubusercontent.com/CatScan-crypt/Starknet-ERC20-Deployer/refs/heads/main/bash/curlPack.bash | bash
 ```
-
-This will download and install all necessary files.
-&nbsp;
+This will download and install all necessary files. &nbsp; \
 &nbsp;
 
 &nbsp;
+Example output: &nbsp; \
+![ezgif-5-6658a38e4b](https://github.com/user-attachments/assets/60a99204-7515-4cd3-891c-0b10b6193389)
 
 &nbsp;
+&nbsp;
+
 ## First Time Deployment🚀 🚀 🚀 
 
 Once the installation is complete, run the following command to deploy the test ERC20 token:
@@ -49,11 +51,12 @@ cd Starknet-ERC20-Deployer && npm run firstDeploy
 ```
 
 You will be prompted to enter your private key and the address to deploy your token. &nbsp; \
-Make sure your wallet is already deployed on sepolia with either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.xyz/).
-&nbsp;
-&nbsp;
+Make sure your wallet is already deployed on sepolia with either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.xyz/). &nbsp; \
 
 &nbsp;
+&nbsp;
+Example first deploy: &nbsp; \
+![ezgif-6-4abad87ace](https://github.com/user-attachments/assets/9c697f7d-697d-4730-a550-5eb3c5f9d7e0)
 
 &nbsp;
 ## Customization📊
