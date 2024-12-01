@@ -51,7 +51,7 @@ cd Starknet-ERC20-Deployer && npm run firstDeploy
 ```
 
 You will be prompted to enter your private key and the address to deploy your token. &nbsp; \
-Make sure your wallet is already deployed on sepolia with either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.xyz/). &nbsp; \
+Make sure your wallet is already deployed on sepolia with either [ArgentX](https://www.argent.xyz/) or [Braavos](https://braavos.xyz/).
 
 &nbsp;
 &nbsp;
