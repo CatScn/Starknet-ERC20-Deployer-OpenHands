@@ -11,10 +11,11 @@ With a simple installation and deployment process, you can quickly create and cu
 
 &nbsp;
 ## 🛠️Prerequisites🛠️
+You can use this tool on:
+- Bash: Linux Ubuntu > 24.04 | Windows - [WSL2](https://www.sitepoint.com/wsl2)
 
 Before using this tool, ensure you have the following installed:
 
-- Bash: Linux Ubuntu > 24.04 | Windows - [WSL2](https://www.sitepoint.com/wsl2)
 - [Node.js](https://nodejs.org/) (v22.11.0 or higher)
 - [curl](https://curl.se/)
 - [git](https://git-scm.com/)&nbsp; 
