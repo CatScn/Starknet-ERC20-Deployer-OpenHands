@@ -14,7 +14,7 @@ With a simple installation and deployment process, you can quickly create and cu
 
 Before using this tool, ensure you have the following installed:
 
-- Bash: Linux Ubuntu > 22.04 | Windows - [WSL2](https://www.sitepoint.com/wsl2) | macOS - [Change settings](https://alvinwanjala.com/blog/set-bash-default-macos-shell)
+- Bash: Linux Ubuntu > 24.04 | Windows - [WSL2](https://www.sitepoint.com/wsl2)
 - [Node.js](https://nodejs.org/) (v22.11.0 or higher)
 - [curl](https://curl.se/)
 - [git](https://git-scm.com/)&nbsp; 
