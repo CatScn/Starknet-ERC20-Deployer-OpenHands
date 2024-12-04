@@ -102,7 +102,6 @@ The following features are planned for future updates:
 
 - [x] Adding an example GIF or video for easier understanding.
 - [x] Verifying the contract on Voyager.
-- [ ] Implementing an uninstaller.
 - [ ] Adding a CLI (Command Line Interface) for easier configuration.
 - [ ] Introducing a component builder for customizing options like **ownable**, **mintable**, **burnable**, etc.
 - [ ] Adding Voyager Verifier support for contract verification.
