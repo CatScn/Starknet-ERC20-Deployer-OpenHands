@@ -89,10 +89,10 @@ npm run deploy
 
 &nbsp;
 ## Verification🐱‍👤
-Deploying a token with this tool will output a verified class hash, [sepolia class hash](https://sepolia.voyager.online/class/0x01a8655ab30252af2383100169d84090df14c39376d3da8fbe95d9548c2ad178) or [mainnet class hash](https://voyager.online/class/0x01a8655ab30252af2383100169d84090df14c39376d3da8fbe95d9548c2ad178).
+Deploying a token with this tool will output a verified class hash, [sepolia class hash](https://sepolia.voyager.online/class/0x01a8655ab30252af2383100169d84090df14c39376d3da8fbe95d9548c2ad178).
 
 [Sepolia deployed verified erc20 example.](https://sepolia.voyager.online/contract/0x001f7b137c8A87BFA8DD39EAdd0737784a3Da0d1c7Be415B8f74F4B5881eBD5C#tokenHolders) &nbsp; \
-[Mainnet deployed verified erc20 example.](https://voyager.online/contract/0x3be4109d086bdc5953b2ed06c16305aae7044e1b20b44e0114e4ad6346914e2)
+
 
 &nbsp;
 
