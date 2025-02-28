@@ -12,7 +12,13 @@
 
 - [ ] Implement `config` command: Manage project configuration.
     - [ ] Implement `set` subcommand: Set configuration values.
+        - [ ] Implement `config set private-key <private_key>`
+        - [ ] Implement `config set account-address <account_address>`
+        - [ ] Implement `config set network <network>`
     - [ ] Implement `get` subcommand: Get configuration values.
+        - [ ] Implement `config get private-key`
+        - [ ] Implement `config get account-address`
+        - [ ] Implement `config get network`
     - [ ] Implement `init` subcommand: Initialize a new project, creating a default `.env` file.
 
 - [ ] Implement `verify` command: Verify the deployed contract on Voyager.
