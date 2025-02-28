@@ -9,6 +9,9 @@
     - [ ] Implement `--account-address <account_address>` option: Wallet account address.
     - [ ] Implement `--network <network>` option: Network to deploy to (e.g., sepolia, mainnet).
     - [ ] Implement `--env-file <path_to_env_file>` option: Load parameters from an environment file.
+    - [ ] Compile the ERC20 contract
+    - [ ] Deploy the compiled contract to Starknet
+    - [ ] Output the contract address
 
 - [ ] Implement `config` command: Manage project configuration.
     - [ ] Implement `set` subcommand: Set configuration values.
@@ -24,6 +27,8 @@
 - [ ] Implement `verify` command: Verify the deployed contract on Voyager.
     - [ ] Implement `--contract-address <contract_address>` option: The address of the deployed contract.
     - [ ] Implement `--network <network>` option: The network the contract is deployed on.
+    - [ ] Verify contract source code
+    - [ ] Verify contract ABI
 
 - [ ] Implement `info` command: Display information about the project or deployed token.
     - [ ] Implement `project` subcommand: Display project information (e.g., version, dependencies).
