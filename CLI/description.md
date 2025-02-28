@@ -1,38 +1,24 @@
-# CLI Description
+# CLI TODO
 
-This CLI provides the following core functionalities for the Starknet ERC20 Deployer:
+- [ ] Implement `deploy` command: Deploy a new ERC20 token with customizable parameters.
+    - [ ] Implement `--name <token_name>` option: Token name.
+    - [ ] Implement `--symbol <token_symbol>` option: Token symbol.
+    - [ ] Implement `--initial-supply <initial_supply>` option: Initial token supply.
+    - [ ] Implement `--decimals <decimals>` option: Token decimals.
+    - [ ] Implement `--private-key <private_key>` option: Wallet private key.
+    - [ ] Implement `--account-address <account_address>` option: Wallet account address.
+    - [ ] Implement `--network <network>` option: Network to deploy to (e.g., sepolia, mainnet).
+    - [ ] Implement `--env-file <path_to_env_file>` option: Load parameters from an environment file.
 
-## Deployment
+- [ ] Implement `config` command: Manage project configuration.
+    - [ ] Implement `set` subcommand: Set configuration values.
+    - [ ] Implement `get` subcommand: Get configuration values.
+    - [ ] Implement `init` subcommand: Initialize a new project, creating a default `.env` file.
 
-*   `deploy`: Deploy a new ERC20 token with customizable parameters.
-    *   Options:
-        *   `--name <token_name>`: Token name.
-        *   `--symbol <token_symbol>`: Token symbol.
-        *   `--initial-supply <initial_supply>`: Initial token supply.
-        *   `--decimals <decimals>`: Token decimals.
-        *   `--private-key <private_key>`: Wallet private key.
-        *   `--account-address <account_address>`: Wallet account address.
-        *   `--network <network>`: Network to deploy to (e.g., sepolia, mainnet).
-        *   `--env-file <path_to_env_file>`: Load parameters from an environment file.
+- [ ] Implement `verify` command: Verify the deployed contract on Voyager.
+    - [ ] Implement `--contract-address <contract_address>` option: The address of the deployed contract.
+    - [ ] Implement `--network <network>` option: The network the contract is deployed on.
 
-## Configuration
-
-*   `config`: Manage project configuration.
-    *   Subcommands:
-        *   `set`: Set configuration values.
-        *   `get`: Get configuration values.
-        *   `init`: Initialize a new project, creating a default `.env` file.
-
-## Verification
-
-*   `verify`: Verify the deployed contract on Voyager.
-    *   Options:
-        *   `--contract-address <contract_address>`: The address of the deployed contract.
-        *   `--network <network>`: The network the contract is deployed on.
-
-## Information
-
-*   `info`: Display information about the project or deployed token.
-    *   Subcommands:
-        *   `project`: Display project information (e.g., version, dependencies).
-        *   `token`: Display token information (e.g., name, symbol, supply, contract address).
+- [ ] Implement `info` command: Display information about the project or deployed token.
+    - [ ] Implement `project` subcommand: Display project information (e.g., version, dependencies).
+    - [ ] Implement `token` subcommand: Display token information (e.g., name, symbol, supply, contract address).
