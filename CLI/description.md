@@ -27,4 +27,10 @@
 
 - [ ] Implement `info` command: Display information about the project or deployed token.
     - [ ] Implement `project` subcommand: Display project information (e.g., version, dependencies).
+        - [ ] Display project version
+        - [ ] Display project dependencies
     - [ ] Implement `token` subcommand: Display token information (e.g., name, symbol, supply, contract address).
+        - [ ] Display token name
+        - [ ] Display token symbol
+        - [ ] Display token supply
+        - [ ] Display token contract address
