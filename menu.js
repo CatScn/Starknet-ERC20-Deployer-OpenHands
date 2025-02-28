@@ -1,5 +1,5 @@
-import * as readline from 'readline';
-import { execSync } from 'child_process';
+const readline = require('readline');
+const { execSync } = require('child_process');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,7 +14,7 @@ const options = [
   "Exit"
 ];
 
-function askQuestion(query: string): Promise<string> {
+function askQuestion(query) {
   return new Promise(resolve => {
     rl.question(query, answer => {
       resolve(answer);
@@ -22,40 +22,49 @@ function askQuestion(query: string): Promise<string> {
   });
 }
 
-async function main() {
-  while (true) {
+function main() {
+  function loop() {
     console.log("\\nPlease enter your choice:");
     options.forEach((option, index) => {
       console.log(`${index + 1}. ${option}`);
     });
 
-    const choice = await askQuestion("Enter your choice: ");
-    const choiceNum = parseInt(choice);
+    askQuestion("Enter your choice: ")
+      .then(choice => {
+        const choiceNum = parseInt(choice);
 
-    switch (choiceNum) {
-      case 1: {
-        const key = await askQuestion("Enter key: ");
-        const value = await askQuestion("Enter value: ");
-        execSync(`node CLI/cli.ts config set "${key}" "${value}"`);
-        break;
-      }
-      case 2: {
-        const key = await askQuestion("Enter key: ");
-        execSync(`node CLI/cli.ts config get "${key}"`);
-        break;
-      }
-      case 3: {
-        execSync(`node CLI/cli.ts config init`);
-        break;
-      }
-      case 4: {
+        switch (choiceNum) {
+          case 1:
+            return askQuestion("Enter key: ")
+              .then(key => askQuestion("Enter value: ")
+                .then(value => {
+                  execSync(`node CLI/cli.ts config set "${key}" "${value}"`);
+                  loop();
+                }));
+          case 2:
+            return askQuestion("Enter key: ")
+              .then(key => {
+                execSync(`node CLI/cli.ts config get "${key}"`);
+                loop();
+              });
+          case 3:
+            execSync(`node CLI/cli.ts config init`);
+            loop();
+            break;
+          case 4:
+            rl.close();
+            return;
+          default:
+            console.log("Invalid option");
+            loop();
+        }
+      })
+      .catch(err => {
+        console.error(err);
         rl.close();
-        return;
-      }
-      default:
-        console.log("Invalid option");
-    }
+      });
   }
+  loop();
 }
 
 main();
