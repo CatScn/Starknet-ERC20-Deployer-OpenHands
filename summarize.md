@@ -1,3 +1,6 @@
+
+
+<!-- ALWAYS remember to execute commands from /workspace/new_repo -->
 # Starknet ERC20 Token Deployer Summary
 
 An easy-to-install and deploy tool for deploying an ERC20 token on the Starknet network. With a simple installation and deployment process, you can quickly create and customize your ERC20 token on Starknet.
