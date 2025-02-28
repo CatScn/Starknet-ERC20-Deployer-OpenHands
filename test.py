@@ -40,8 +40,11 @@ def main():
 
         elif choice == '2':
             key = get_user_input("Enter the variable name to set: ")
-            value = get_user_input(f"Enter the value for {key}: ")
+            value = a
+
             dotenv_path = os.path.join(os.getcwd(), '.env')
+
+            # Setting the environment variable without backticks
             set_key(dotenv_path, key, value)
             print(f"Successfully set {key} to {value}")
 
