@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# Function to load environment variables from .env file
+# Function to load environment variables from .env file and store keys in an array
 load_env_vars() {
+  env_keys=()
   while IFS== read -r key value; do
     if [[ -n "$key" && ! "$key" =~ ^#.* ]]; then
       eval export "$key=$value"
+      env_keys+=("$key")
     fi
   done < .env
 }
@@ -22,12 +24,10 @@ display_menu() {
 # Function to display the environment variable menu
 display_env_var_menu() {
   local i=1
-  while IFS== read -r key value; do
-    if [[ -n "$key" && ! "$key" =~ ^#.* ]]; then
-      echo "$i. $key"
-      ((i++))
-    fi
-  done < .env
+  for key in "${env_keys[@]}"; do
+    echo "$i. $key"
+    ((i++))
+  done
 }
 
 # Function to get user input
