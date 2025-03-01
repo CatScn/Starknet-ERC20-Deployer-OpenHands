@@ -1,13 +1,14 @@
 # CLI TODO
 
 - [ ] Implement `deploy` command: Deploy a new ERC20 token with customizable parameters.
+    - [ ] Implement `--test` flag: Deploy to the test network.
     - [ ] Implement `--name <token_name>` option: Token name.
     - [ ] Implement `--symbol <token_symbol>` option: Token symbol.
     - [ ] Implement `--initial-supply <initial_supply>` option: Initial token supply.
     - [ ] Implement `--decimals <decimals>` option: Token decimals.
     - [ ] Implement `--private-key <private_key>` option: Wallet private key.
     - [ ] Implement `--account-address <account_address>` option: Wallet account address.
-    - [ ] Implement `--network <network>` option: Network to deploy to (e.g., sepolia, mainnet).\n    - [ ] Implement `--test` flag: Deploy to the test network.
+    - [ ] Implement `--network <network>` option: Network to deploy to (e.g., sepolia, mainnet).
     
 
 - [ ] Implement `config` command: Manage project configuration.
