@@ -30,7 +30,7 @@
         - [ ] Implement `config get test private-key`
         - [ ] Implement `config get test account-address`
         - [ ] Implement `config get test network`
-    - [ ] Implement `init-test`subcommand: Initialize a new project, creating a default `test.env` file.
+    - [x] Implement `init-test`subcommand: Initialize a new project, creating a default `test.env` file.
 
 
 - [ ] Implement `verify` command: Verify the deployed contract on Voyager.

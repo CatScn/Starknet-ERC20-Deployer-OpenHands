@@ -1,8 +1,20 @@
 #!/usr/bin/env bash
 
+# Determine the script's directory
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Construct the absolute path to the .env file
+ENV_FILE="$SCRIPT_DIR/../.env"
+
+# Check if .env exists, if not, run config_init.sh
+if [ ! -f "$ENV_FILE" ]; then
+  echo ".env file not found. Running config_init.sh..."
+  "$SCRIPT_DIR/config_init.sh"
+fi
+
 # Load environment variables
 load_env() {
-  source .env
+  source "$ENV_FILE"
 }
 
 # Load environment variables
@@ -29,19 +41,24 @@ done
 if [ -n "$get_option" ]; then
   case "$get_option" in
     "private-key")
-      echo "$DEPLOYER_PRIVATE_KEY"
+      printf "%s\n" "${DEPLOYER_PRIVATE_KEY}"
+      exit 0
       ;;
     "account-address")
-      echo "$DEPLOYER_ADDRESS"
+      printf "%s\n" "${DEPLOYER_ADDRESS}"
+      exit 0
       ;;
     "network")
-      echo "$NETWORK"
+      printf "%s\n" "${NETWORK}"
+      exit 0
       ;;
     "rpc-endpoint-sepolia")
-      echo "$RPC_ENDPOINT_SEPOLIA"
+      printf "%s\n" "${RPC_ENDPOINT_SEPOLIA}"
+      exit 0
       ;;
     "rpc-endpoint-mainnet")
-      echo "$RPC_ENDPOINT_MAINNET"
+      printf "%s\n" "${RPC_ENDPOINT_MAINNET}"
+      exit 0
       ;;
     *)
       echo "Invalid get option: $get_option"
