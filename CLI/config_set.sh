@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
+# Determine the script's directory
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Construct the absolute path to the .env file
+ENV_FILE="$SCRIPT_DIR/../.env"
+
 # Load environment variables
 load_env() {
-  source .env
+  source "$ENV_FILE"
 }
 
 # Load environment variables
@@ -30,13 +36,13 @@ if [ -n "$set_option" ]; then
   read -p "Enter new value for $set_option: " new_value
   case "$set_option" in
     "private-key")
-      sed -i "s/^DEPLOYER_PRIVATE_KEY=.*/DEPLOYER_PRIVATE_KEY=\"$new_value\"/" .env
+      sed -i "s/^DEPLOYER_PRIVATE_KEY=.*/DEPLOYER_PRIVATE_KEY=\"$new_value\"/" "$ENV_FILE"
       ;;
     "account-address")
-      sed -i "s/^DEPLOYER_ADDRESS=.*/DEPLOYER_ADDRESS=\"$new_value\"/" .env
+      sed -i "s/^DEPLOYER_ADDRESS=.*/DEPLOYER_ADDRESS=\"$new_value\"/" "$ENV_FILE"
       ;;
     "network")
-      sed -i "s/^NETWORK=.*/NETWORK=\"$new_value\"/" .env
+      sed -i "s/^NETWORK=.*/NETWORK=\"$new_value\"/" "$ENV_FILE"
       ;;
     "rpc-endpoint-sepolia")
       echo "Cannot set rpc-endpoint-sepolia"
