@@ -21,6 +21,18 @@
         - [ ] Implement `config get account-address`
         - [ ] Implement `config get network`
     - [ ] Implement `init` subcommand: Initialize a new project, creating a default `.env` file.
+        - [ ] Implement `config init-test test-env <test_env>`
+
+    - [ ] Implement `set-test` subcommand: Set configuration values.
+        - [ ] Implement `config set test private-key <private_key>`
+        - [ ] Implement `config set test account-address <account_address>`
+        - [ ] Implement `config set test network <network>`
+    - [ ] Implement `get-test` subcommand: Get configuration values.
+        - [ ] Implement `config get test private-key`
+        - [ ] Implement `config get test account-address`
+        - [ ] Implement `config get test network`
+    - [ ] Implement `init-test`subcommand: Initialize a new project, creating a default `test.env` file.
+
 
 - [ ] Implement `verify` command: Verify the deployed contract on Voyager.
     - [ ] Implement `--contract-address <contract_address>` option: The address of the deployed contract.
