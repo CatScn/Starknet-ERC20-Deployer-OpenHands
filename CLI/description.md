@@ -7,8 +7,8 @@
     - [ ] Implement `--decimals <decimals>` option: Token decimals.
     - [ ] Implement `--private-key <private_key>` option: Wallet private key.
     - [ ] Implement `--account-address <account_address>` option: Wallet account address.
-    - [ ] Implement `--network <network>` option: Network to deploy to (e.g., sepolia, mainnet).
-    - [ ] Implement `--env-file <path_to_env_file>` option: Load parameters from an environment file.
+    - [ ] Implement `--network <network>` option: Network to deploy to (e.g., sepolia, mainnet).\n    - [ ] Implement `--test` flag: Deploy to the test network.
+    
 
 - [ ] Implement `config` command: Manage project configuration.
     - [ ] Implement `set` subcommand: Set configuration values.
