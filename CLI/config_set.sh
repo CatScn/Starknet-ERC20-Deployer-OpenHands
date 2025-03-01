@@ -38,6 +38,14 @@ if [ -n "$set_option" ]; then
     "network")
       sed -i "s/^NETWORK=.*/NETWORK=\"$new_value\"/" .env
       ;;
+    "rpc-endpoint-sepolia")
+      echo "Cannot set rpc-endpoint-sepolia"
+      exit 1
+      ;;
+    "rpc-endpoint-mainnet")
+      echo "Cannot set rpc-endpoint-mainnet"
+      exit 1
+      ;;
     *)
       echo "Invalid set option: $set_option"
       exit 1
@@ -47,6 +55,6 @@ if [ -n "$set_option" ]; then
 else
   echo "Usage: ./config_set.sh -g <option>"
   echo ""
-  echo "Config Options: private-key, account-address, network"
+  echo "Config Options: private-key, account-address, network, rpc-endpoint-sepolia, rpc-endpoint-mainnet"
   exit 1
 fi
