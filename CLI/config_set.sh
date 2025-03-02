@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
-# Determine the script's directory
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-
-# Construct the absolute path to the .env file
-ENV_FILE="$SCRIPT_DIR/../.env"
-
 # Load environment variables
 load_env() {
-  source "$ENV_FILE"
+  source .env
 }
 
+# Load environment variables
+load_env
 
 # Parse flags
 while getopts "c:g:" opt; do
