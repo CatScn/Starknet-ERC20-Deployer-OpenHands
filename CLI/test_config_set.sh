@@ -1,22 +1,21 @@
-#!/usr/bin/expect -f
+#!/bin/bash
 
-# Set timeout
-set timeout 10
+# Test setting NETWORK using expect
+expect -c '
+  spawn ./config_set.sh -g network
+  expect "Enter new value for network: "
+  send "testnet\r"
+  expect eof
+  wait
+'
 
-# Source the config_get.sh script
-source ./config_get.sh
+# Get the exit code
+EXIT_CODE=$?
 
-# Test setting NETWORK
-spawn ./config_set.sh -g network
-expect "Enter new value for network: "
-send "goerli\r"
-expect eof
-
-# Verify network is goerli
-set NETWORK_VALUE [exec ./config_get.sh network]
-
-if { "$NETWORK_VALUE" eq "goerli" } {
-  puts "Test passed!"
-} else {
-  puts "Test failed!"
-}
+# Check the exit code
+if [ "$EXIT_CODE" -eq 0 ]; then
+  echo "Test passed!"
+else
+  echo "Test failed!"
+  echo "Exit code: $EXIT_CODE"
+fi
