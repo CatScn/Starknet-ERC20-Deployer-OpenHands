@@ -30,19 +30,19 @@ done
 # Set config option
 case "$option" in
   "private-key")
-    sed -i "s/^DEPLOYER_PRIVATE_KEY=.*/DEPLOYER_PRIVATE_KEY=\"$value\"/" .env
+    sed -i "s/^DEPLOYER_PRIVATE_KEY=.*/DEPLOYER_PRIVATE_KEY=$value/" .env
     ;;
   "account-address")
-    sed -i "s/^DEPLOYER_ADDRESS=.*/DEPLOYER_ADDRESS=\"$value\"/" .env
+    sed -i "s/^DEPLOYER_ADDRESS=.*/DEPLOYER_ADDRESS=$value/" .env
     ;;
   "network")
-    sed -i "s/^NETWORK=.*/NETWORK=\"$value\"/" .env
+    sed -i "s/^NETWORK=.*/NETWORK=$value/" .env
     ;;
   "rpc-endpoint-sepolia")
-    sed -i "s/^RPC_ENDPOINT_SEPOLIA=.*/RPC_ENDPOINT_SEPOLIA=\"$value\"/" .env
+    sed -i "s/^RPC_ENDPOINT_SEPOLIA=.*/RPC_ENDPOINT_SEPOLIA=$value/" .env
     ;;
   "rpc-endpoint-mainnet")
-    sed -i "s/^RPC_ENDPOINT_MAINNET=.*/RPC_ENDPOINT_MAINNET=\"$value\"/" .env
+    sed -i "s/^RPC_ENDPOINT_MAINNET=.*/RPC_ENDPOINT_MAINNET=$value/" .env
     ;;
   *)
     echo "Invalid option: $option"
