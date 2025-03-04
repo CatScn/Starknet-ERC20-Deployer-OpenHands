@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Determine the script's directory
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
 # Construct the absolute path to the .env files
 ENV_FILE="$SCRIPT_DIR/../.env"

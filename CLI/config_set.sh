@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 ENV_FILE="$SCRIPT_DIR/../.env"
 
 # Load environment variables

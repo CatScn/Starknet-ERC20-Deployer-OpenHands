@@ -2,7 +2,7 @@
 
 set -e
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 ENV_FILE="$SCRIPT_DIR/../../.env"
 
 # Load environment variables
@@ -26,6 +26,6 @@ load_env
 "$SCRIPT_DIR/../config_set.sh" -g rpc-endpoint-sepolia=test_rpc_sepolia
 
 # Test setting rpc-endpoint-mainnet
-"$SCRIPT_DIR/../config_set.sh" -g rpc-endpoint-mainnet=test_rpc_mainnet
+./config_set.sh -g rpc-endpoint-mainnet=test_rpc_mainnet
 
 echo "All config_set.sh tests completed successfully."
