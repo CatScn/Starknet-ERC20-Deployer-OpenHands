@@ -29,7 +29,7 @@ while getopts "c:g:" opt; do
 done
 
 # Check if --config and --get are used together
-if [ -n "$config_action" ] && [ -n "$get_option" ]; then
+if [ -n "$config_action" ] && [ -n "$set_option" ]; then
   case "$config_action" in
     "get")
       case "$get_option" in
@@ -76,8 +76,8 @@ if [ -n "$config_action" ] && [ -n "$get_option" ]; then
       ;;
   esac
 else
-  echo "Usage: ./cli.sh -c <config_option> -g <get_option>"
-  echo "Usage: ./config_get.sh -c get -g <option>"
+  echo "Usage: ./cli.sh -c <config_option> -g <set_option>"
+  echo "Usage: ./config_set.sh -c get -g <option>"
   echo ""
   echo "Config Options: private-key, account-address, network, rpc-endpoint-sepolia, rpc-endpoint-mainnet"
   exit 1
