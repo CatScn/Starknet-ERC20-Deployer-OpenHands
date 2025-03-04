@@ -2,7 +2,7 @@
 
 # Load environment variables
 load_env() {
-  source .env
+  source "$(pwd)/.env"
 }
 
 # Load environment variables
@@ -30,9 +30,6 @@ done
 
 # Check if --config and --get are used together
 if [ -n "$config_action" ] && [ -n "$get_option" ]; then
-  case "$get_option" in
-    "private-key")
-      echo "$DEPLOYER_PRIVATE_KEY"
   case "$config_action" in
     "get")
       case "$get_option" in
@@ -57,6 +54,10 @@ if [ -n "$config_action" ] && [ -n "$get_option" ]; then
           ;;
       esac
       ;;
+    "init")
+      echo "Init not implemented yet"
+      exit 1
+      ;;
     "account-address")
       echo "$DEPLOYER_ADDRESS"
       ;;
@@ -68,12 +69,8 @@ if [ -n "$config_action" ] && [ -n "$get_option" ]; then
       ;;
     "rpc-endpoint-mainnet")
       echo "$RPC_ENDPOINT_MAINNET"
-    "init")
-      echo "Init not implemented yet"
-      exit 1
       ;;
     *)
-      echo "Invalid get option: $get_option"
       echo "Invalid config action: $config_action"
       exit 1
       ;;
@@ -84,3 +81,4 @@ else
   echo ""
   echo "Config Options: private-key, account-address, network, rpc-endpoint-sepolia, rpc-endpoint-mainnet"
   exit 1
+fi
