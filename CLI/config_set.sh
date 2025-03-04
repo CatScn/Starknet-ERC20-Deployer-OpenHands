@@ -51,13 +51,8 @@ case "$option" in
 esac
 
 if [ "$show_help" = true ]; then
-  echo "Usage: ./config_set.sh -g <option>=<value>"
-  echo "Options:"
-  echo "  private-key=<value>"
-  echo "  account-address=<value>"
-  echo "  network=<value>"
-  echo "  rpc-endpoint-sepolia=<value>"
-  echo "  rpc-endpoint-mainnet=<value>"
+  echo "Usage: ./config_set.sh -g <option>=value"
+  echo "Config Options: private-key, account-address, network, rpc-endpoint-sepolia, rpc-endpoint-mainnet"
   exit 1
 fi
 
