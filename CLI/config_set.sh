@@ -18,7 +18,7 @@ while getopts "g:" opt; do
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
-      exit 1
+      show_help=true
       ;;
     :)
       echo "Option -$OPTARG requires an argument." >&2
@@ -46,8 +46,19 @@ case "$option" in
     ;;
   *)
     echo "Invalid option: $option"
-    exit 1
+    show_help=true
     ;;
 esac
+
+if [ "$show_help" = true ]; then
+  echo "Usage: ./config_set.sh -g <option>=<value>"
+  echo "Options:"
+  echo "  private-key=<value>"
+  echo "  account-address=<value>"
+  echo "  network=<value>"
+  echo "  rpc-endpoint-sepolia=<value>"
+  echo "  rpc-endpoint-mainnet=<value>"
+  exit 1
+fi
 
 load_env # Reload environment variables after modification
