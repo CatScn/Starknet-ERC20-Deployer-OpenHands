@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+ENV_FILE="$SCRIPT_DIR/../.env"
 
 # Load environment variables
 load_env() {
-  source "$(pwd)/.env"
+  source "$ENV_FILE"
 }
 
 # Load environment variables
