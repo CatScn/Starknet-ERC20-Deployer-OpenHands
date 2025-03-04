@@ -12,7 +12,9 @@ load_env
 while getopts "g:" opt; do
   case $opt in
     g)
-      get_option="$OPTARG"
+      option_and_value="$OPTARG"
+      option="${option_and_value%=*}"
+      value="${option_and_value#*=}"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -25,25 +27,27 @@ while getopts "g:" opt; do
   esac
 done
 
-# Get config option
-case "$get_option" in
+# Set config option
+case "$option" in
   "private-key")
-    echo "$DEPLOYER_PRIVATE_KEY"
+    sed -i "s/^DEPLOYER_PRIVATE_KEY=.*/DEPLOYER_PRIVATE_KEY=\"$value\"/" .env
     ;;
   "account-address")
-    echo "$DEPLOYER_ADDRESS"
+    sed -i "s/^DEPLOYER_ADDRESS=.*/DEPLOYER_ADDRESS=\"$value\"/" .env
     ;;
   "network")
-    echo "$NETWORK"
+    sed -i "s/^NETWORK=.*/NETWORK=\"$value\"/" .env
     ;;
   "rpc-endpoint-sepolia")
-    echo "$RPC_ENDPOINT_SEPOLIA"
+    sed -i "s/^RPC_ENDPOINT_SEPOLIA=.*/RPC_ENDPOINT_SEPOLIA=\"$value\"/" .env
     ;;
   "rpc-endpoint-mainnet")
-    echo "$RPC_ENDPOINT_MAINNET"
+    sed -i "s/^RPC_ENDPOINT_MAINNET=.*/RPC_ENDPOINT_MAINNET=\"$value\"/" .env
     ;;
   *)
-    echo "Invalid get option: $get_option"
+    echo "Invalid option: $option"
     exit 1
     ;;
 esac
+
+load_env # Reload environment variables after modification
