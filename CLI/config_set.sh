@@ -89,6 +89,7 @@ case "$option" in
     ;;
 esac
 
+load_env # Reload environment variables after modification
 if [ "$show_help" = true ]; then
   echo ""
   echo "Usage: ./config_set.sh -o <option>=value"
