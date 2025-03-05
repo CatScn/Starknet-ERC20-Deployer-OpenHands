@@ -65,10 +65,10 @@ case "$option" in
     sed -i "s/^NETWORK=.*/NETWORK=$value/" "$ENV_FILE"
     ;;
   "RPC_ENDPOINT_SEPOLIA")
-    sed -i "s/^RPC_ENDPOINT_SEPOLIA=.*/RPC_ENDPOINT_SEPOLIA=$value/" "$ENV_FILE"
+    sed -i "s/^RPC_ENDPOINT_SEPOLIA=.*/RPC_ENDPOINT_SEPOLIA=$(echo "$value" | sed 's/\//\\\//g')/" "$ENV_FILE"
     ;;
   "RPC_ENDPOINT_MAINNET")
-    sed -i "s/^RPC_ENDPOINT_MAINNET=.*/RPC_ENDPOINT_MAINNET=$value/" "$ENV_FILE"
+    sed -i "s/^RPC_ENDPOINT_MAINNET=.*/RPC_ENDPOINT_MAINNET=$(echo "$value" | sed 's/\//\\\//g')/" "$ENV_FILE"
     ;;
   "TOKEN_NAME")
     sed -i "s/^TOKEN_NAME=.*/TOKEN_NAME=$value/" "$ENV_FILE"
