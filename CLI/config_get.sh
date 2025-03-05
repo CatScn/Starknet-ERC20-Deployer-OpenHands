@@ -25,9 +25,9 @@ load_env() {
 load_env
 
 # Parse flags
-while getopts "g:" opt; do
+while getopts "o:" opt; do
   case $opt in
-    g)
+    o)
       get_option="$OPTARG"
       ;;
     \?)
@@ -40,38 +40,57 @@ while getopts "g:" opt; do
       ;;
   esac
 done
+message="DEPLOYER_PRIVATE_KEY, DEPLOYER_ADDRESS, NETWORK, RPC_ENDPOINT_SEPOLIA, RPC_ENDPOINT_MAINNET, TOKEN_NAME, SYMBOL_NAME, DECIMALS_LENGTH, FIXED_SUPPLY"
+helpMessage="$message"
 
-# Check if -g is used
+# Check if -o is used
 if [ -n "$get_option" ]; then
   case "$get_option" in
-    "private-key")
+    "DEPLOYER_PRIVATE_KEY")
       printf "%s\n" "${DEPLOYER_PRIVATE_KEY}"
       exit 0
       ;;
-    "account-address")
+    "DEPLOYER_ADDRESS")
       printf "%s\n" "${DEPLOYER_ADDRESS}"
       exit 0
       ;;
-    "network")
+    "NETWORK")
       printf "%s\n" "${NETWORK}"
       exit 0
       ;;
-    "rpc-endpoint-sepolia")
+    "RPC_ENDPOINT_MAINNET")
+      printf "%s\n" "${RPC_ENDPOINT_MAINNET}"
+      exit 0
+      ;;
+    "RPC_ENDPOINT_SEPOLIA")
       printf "%s\n" "${RPC_ENDPOINT_SEPOLIA}"
       exit 0
       ;;
-    "rpc-endpoint-mainnet")
-      printf "%s\n" "${RPC_ENDPOINT_MAINNET}"
+    "TOKEN_NAME")
+      printf "%s\n" "${TOKEN_NAME}"
+      exit 0
+      ;;
+    "SYMBOL_NAME")
+      printf "%s\n" "${SYMBOL_NAME}"
+      exit 0
+      ;;
+    "DECIMALS_LENGTH")
+      printf "%s\n" "${DECIMALS_LENGTH}"
+      exit 0
+      ;;
+    "FIXED_SUPPLY")
+      printf "%s\n" "${FIXED_SUPPLY}"
       exit 0
       ;;
     *)
       echo "Invalid get option: $get_option"
+      echo "$helpMessage"
       exit 1
       ;;
   esac
 else
   echo "Usage: ./config_get.sh -o <option>"
   echo ""
-  echo "Config Options: private-key, account-address, network, rpc-endpoint-sepolia, rpc-endpoint-mainnet"
+  echo "$helpMessage"
   exit 1
 fi
