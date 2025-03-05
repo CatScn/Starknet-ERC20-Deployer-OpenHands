@@ -2,17 +2,22 @@
 
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
+# Define variables
+CONFIG_SCRIPT="$SCRIPT_DIR/../config.sh"
+GET_COMMAND="-m get -o"
+SET_COMMAND="-m set -o"
+
 echo "testing set"
 # Set test values
-"$SCRIPT_DIR/../config.sh" -m set -o "DEPLOYER_PRIVATE_KEY=0x1122334455667788"
-"$SCRIPT_DIR/../config.sh" -m set -o "DEPLOYER_ADDRESS=0x8877665544332211"
-"$SCRIPT_DIR/../config.sh" -m set -o "NETWORK=testnet"
-"$SCRIPT_DIR/../config.sh" -m set -o "RPC_ENDPOINT_SEPOLIA=https://sepolia.example.com"
-"$SCRIPT_DIR/../config.sh" -m set -o "RPC_ENDPOINT_MAINNET=https://mainnet.example.com"
-"$SCRIPT_DIR/../config.sh" -m set -o "TOKEN_NAME=TestToken"
-"$SCRIPT_DIR/../config.sh" -m set -o "SYMBOL_NAME=TTK"
-"$SCRIPT_DIR/../config.sh" -m set -o "DECIMALS_LENGTH=8"
-"$SCRIPT_DIR/../config.sh" -m set -o "FIXED_SUPPLY=1000000"
+"$CONFIG_SCRIPT" "$SET_COMMAND" "DEPLOYER_PRIVATE_KEY=0x1122334455667788"  2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "DEPLOYER_ADDRESS=0x8877665544332211"  2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "NETWORK=testnet"  2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "RPC_ENDPOINT_SEPOLIA=https://sepolia.example.com"  2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "RPC_ENDPOINT_MAINNET=https://mainnet.example.com"  2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "TOKEN_NAME=TestToken" 2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "SYMBOL_NAME=TTK"  2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "DECIMALS_LENGTH=8"  2>/dev/null
+"$CONFIG_SCRIPT" "$SET_COMMAND" "FIXED_SUPPLY=1000000"  2>/dev/null
 
 echo "testing get"
 
