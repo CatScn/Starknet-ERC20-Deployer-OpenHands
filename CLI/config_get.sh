@@ -5,28 +5,9 @@ SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
 # Construct the absolute path to the .env files
 ENV_FILE="$SCRIPT_DIR/../.env"
-TEST_ENV_FILE="$SCRIPT_DIR/../test.env"
-
-# Check for the --test flag
-TEST_FLAG=false
-while [[ $# -gt 0 ]]; do
-  case "$1" in
-    --test)
-      TEST_FLAG=true
-      shift
-      ;;
-    *)
-      break # Stop parsing flags
-      ;;
-  esac
-done
 
 # Determine which env file to use
-if [ "$TEST_FLAG" = true ]; then
-  ENV_TO_SOURCE="$TEST_ENV_FILE"
-else
-  ENV_TO_SOURCE="$ENV_FILE"
-fi
+ENV_TO_SOURCE="$ENV_FILE"
 
 # Load environment variables
 load_env() {
@@ -34,20 +15,16 @@ load_env() {
     source "$ENV_TO_SOURCE"
   else
     echo "Error: Environment file '$ENV_TO_SOURCE' not found."
-    if [ "$TEST_FLAG" = true ]; then
-      echo "Initializing test environment..."
-      "$SCRIPT_DIR/config_init.sh" --test
-      source "$TEST_ENV_FILE" # Source the newly created test.env
-    else
-      exit 1
-    fi
+    echo "Creating a new .env file."
+    "$SCRIPT_DIR/config_init.sh"
+    exit 1
   fi
 }
 
 # Load environment variables
 load_env
 
-# Parse flags (after removing --test)
+# Parse flags
 while getopts "g:" opt; do
   case $opt in
     g)
@@ -93,7 +70,7 @@ if [ -n "$get_option" ]; then
       ;;
   esac
 else
-  echo "Usage: ./config_get.sh [-t|--test] -g <option>"
+  echo "Usage: ./config_get.sh -o <option>"
   echo ""
   echo "Config Options: private-key, account-address, network, rpc-endpoint-sepolia, rpc-endpoint-mainnet"
   exit 1
