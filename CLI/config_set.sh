@@ -5,16 +5,30 @@ ENV_FILE="$SCRIPT_DIR/../.env"
 
 # Load environment variables
 load_env() {
-  source "$ENV_FILE"
+  while IFS= read -r line; do
+      # Skip comments and empty lines
+      if [[ $line =~ ^(#.*|)$ ]]; then
+        continue
+      fi
+
+      # Split into key and value
+      key=$(echo "$line" | cut -d'=' -f1 | xargs)
+      value=$(echo "$line" | cut -d'=' -f2- | xargs)
+
+      # Export the variable
+      if [ -n "$key" ]; then
+        export "$key=$value"
+      fi
+    done < "$ENV_FILE"
 }
 
 # Load environment variables
 load_env
 
 # Parse flags
-while getopts "g:" opt; do
+while getopts "o:" opt; do
   case $opt in
-    g)
+    o)
       option_and_value="$OPTARG"
       option="${option_and_value%=*}"
       value="${option_and_value#*=}"
@@ -30,33 +44,49 @@ while getopts "g:" opt; do
   esac
 done
 
+message="DEPLOYER_PRIVATE_KEY, DEPLOYER_ADDRESS, NETWORK, RPC_ENDPOINT_SEPOLIA, RPC_ENDPOINT_MAINNET, TOKEN_NAME, SYMBOL_NAME, DECIMALS_LENGTH, FIXED_SUPPLY"
+helpMessage="$message"
+
 # Set config option
 case "$option" in
-  "private-key")
-    sed -i "s/^DEPLOYER_PRIVATE_KEY=.*/DEPLOYER_PRIVATE_KEY=$value/" "$ENV_FILE"
+  "DEPLOYER_PRIVATE_KEY")
+    sed -i "s/^DEPLOYER_PRIVATE_KEY *=.*/DEPLOYER_PRIVATE_KEY = $value/" "$ENV_FILE"
     ;;
-  "account-address")
+  "DEPLOYER_ADDRESS")
     sed -i "s/^DEPLOYER_ADDRESS=.*/DEPLOYER_ADDRESS=$value/" "$ENV_FILE"
     ;;
-  "network")
+  "NETWORK")
     sed -i "s/^NETWORK=.*/NETWORK=$value/" "$ENV_FILE"
     ;;
-  "rpc-endpoint-sepolia")
+  "RPC_ENDPOINT_SEPOLIA")
     sed -i "s/^RPC_ENDPOINT_SEPOLIA=.*/RPC_ENDPOINT_SEPOLIA=$value/" "$ENV_FILE"
     ;;
-  "rpc-endpoint-mainnet")
+  "RPC_ENDPOINT_MAINNET")
     sed -i "s/^RPC_ENDPOINT_MAINNET=.*/RPC_ENDPOINT_MAINNET=$value/" "$ENV_FILE"
+    ;;
+  "TOKEN_NAME")
+    sed -i "s/^TOKEN_NAME=.*/TOKEN_NAME=$value/" "$ENV_FILE"
+    ;;
+  "SYMBOL_NAME")
+    sed -i "s/^SYMBOL_NAME=.*/SYMBOL_NAME=$value/" "$ENV_FILE"
+    ;;
+  "DECIMALS_LENGTH")
+    sed -i "s/^DECIMALS_LENGTH=.*/DECIMALS_LENGTH=$value/" "$ENV_FILE"
+    ;;
+  "FIXED_SUPPLY")
+    sed -i "s/^FIXED_SUPPLY=.*/FIXED_SUPPLY=$value/" "$ENV_FILE"
     ;;
   *)
     echo "Invalid option: $option"
-    show_help=true
+    echo "Usage: ./config_set.sh -o <option>=value"
+    echo "$helpMessage"
     ;;
 esac
 
 if [ "$show_help" = true ]; then
   echo ""
-  echo "Usage: ./config_set.sh -g <option>=value"
-  echo "Config Options: private-key, account-address, network, rpc-endpoint-sepolia, rpc-endpoint-mainnet"
+  echo "Usage: ./config_set.sh -o <option>=value"
+  echo "$helpMessage"
   echo ""
   exit 1
 fi
