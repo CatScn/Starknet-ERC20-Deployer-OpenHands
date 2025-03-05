@@ -5,7 +5,6 @@ SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
 # Construct the absolute path to the .env file
 ENV_FILE="$SCRIPT_DIR/../.env"
-TEST_ENV_FILE="$SCRIPT_DIR/../test.env"
 
 CONFIG_FILE=".env"
 TARGET_ENV_FILE="$ENV_FILE"
