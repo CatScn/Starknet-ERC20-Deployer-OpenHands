@@ -7,28 +7,8 @@ SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 ENV_FILE="$SCRIPT_DIR/../.env"
 TEST_ENV_FILE="$SCRIPT_DIR/../test.env"
 
-TEST_FLAG=false
-
-while [[ $# -gt 0 ]]; do
-  case "$1" in
-    --test)
-      TEST_FLAG=true
-      shift
-      ;;
-    *)
-      echo "Unknown parameter passed: $1"
-      exit 1
-      ;;
-  esac
-done
-
-if [ "$TEST_FLAG" = true ]; then
-  CONFIG_FILE="test.env"
-  TARGET_ENV_FILE="$TEST_ENV_FILE"
-else
-  CONFIG_FILE=".env"
-  TARGET_ENV_FILE="$ENV_FILE"
-fi
+CONFIG_FILE=".env"
+TARGET_ENV_FILE="$ENV_FILE"
 
 # Check if CONFIG_FILE already exists
 if [ -f "$TARGET_ENV_FILE" ]; then
