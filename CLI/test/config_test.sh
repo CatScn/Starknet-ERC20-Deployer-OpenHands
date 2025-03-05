@@ -63,4 +63,4 @@ else
   echo "All verifications passed!"
 fi
 
-echo "Testing complete."
+echo "Testing complete. (Added a trivial change to force a new commit)"
