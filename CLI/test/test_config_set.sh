@@ -16,11 +16,14 @@ SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 # Test setting rpc-endpoint-sepolia
 "$SCRIPT_DIR/../config_set.sh" -o RPC_ENDPOINT_SEPOLIA=test
 
+# Test setting rpc-endpoint-sepolia
+"$SCRIPT_DIR/../config_set.sh" -o RPC_ENDPOINT_MAINNET=test
+
 # Test setting rpc-endpoint-mainnet
 "$SCRIPT_DIR/../config_set.sh" -o TOKEN_NAME=test
 
 # Test setting rpc-endpoint-mainnet
-"$SCRIPT_DIR/../config_set.sh" -o FIXED_SUPPLY=tes
+"$SCRIPT_DIR/../config_set.sh" -o FIXED_SUPPLY=test
 
 # Test setting rpc-endpoint-mainnet
 "$SCRIPT_DIR/../config_set.sh" -o SYMBOL_NAME=test
